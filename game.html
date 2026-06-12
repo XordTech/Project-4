@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Play - Algebra Champions</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="particles"></div>
+
+    <div class="game-page active">
+        <header class="game-header">
+            <div class="container" style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
+                <div style="display: flex; align-items: center; gap: 20px;">
+                    <a href="index.html" class="logo" style="text-decoration: none;">
+                        <div class="logo-icon" style="width: 40px; height: 40px; font-size: 20px;">👑</div>
+                        <span class="logo-text" style="font-size: 18px;">Algebra Champions</span>
+                    </a>
+                </div>
+                
+                <div class="game-stats">
+                    <div class="stat-item">
+                        <span class="stat-icon">💰</span>
+                        <span id="coinCount">0</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-icon">⭐</span>
+                        <span id="starCount">0</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-icon">📊</span>
+                        <span id="levelDisplay">Level 1</span>
+                    </div>
+                </div>
+
+                <div style="display: flex; gap: 10px;">
+                    <button class="control-btn" id="voiceBtn" title="Read Aloud">
+                        <span>🔊</span> Listen
+                    </button>
+                    <button class="control-btn" id="hintBtn" title="Get Hint">
+                        <span>💡</span> Hint
+                    </button>
+                    <a href="index.html" class="control-btn">
+                        <span>🏠</span> Home
+                    </a>
+                </div>
+            </div>
+        </header>
+
+        <div class="guide-panel" id="guidePanel">
+            <div class="guide-card">
+                <div class="guide-avatar">🧙‍♂️</div>
+                <div class="guide-name">Algo the Wizard</div>
+                <div class="guide-tip">Variables are like mystery boxes!</div>
+            </div>
+        </div>
+
+        <main class="game-content">
+            <div class="game-container">
+                <div class="accessibility-panel">
+                    <h4>Accessibility Options</h4>
+                    <div class="access-options">
+                        <button class="access-btn" onclick="game.setTextSize('normal')">Normal Text</button>
+                        <button class="access-btn" onclick="game.setTextSize('large')">Large Text</button>
+                        <button class="access-btn" onclick="game.setTextSize('extra-large')">XL Text</button>
+                        <button class="access-btn" id="contrastBtn" onclick="game.toggleHighContrast()">High Contrast</button>
+                        <button class="access-btn" onclick="game.setDifficulty('easy')">Easy</button>
+                        <button class="access-btn" onclick="game.setDifficulty('medium')">Medium</button>
+                        <button class="access-btn" onclick="game.setDifficulty('hard')">Hard</button>
+                    </div>
+                </div>
+
+                <section class="world-map" id="worldMap">
+                    <h2 style="text-align: center; font-family: 'Fredoka One', cursive; font-size: 36px; margin-bottom: 30px;">
+                        Choose Your World
+                    </h2>
+                </section>
+
+                <section class="level-select" id="levelSelect">
+                    <div class="nav-buttons">
+                        <button class="nav-btn" onclick="game.backToMap()">
+                            <span>←</span> Back to Worlds
+                        </button>
+                    </div>
+                    <div style="text-align: center;">
+                        <h2 id="levelSelectTitle" style="font-family: 'Fredoka One', cursive; font-size: 32px; margin-bottom: 20px;">
+                            Select Level
+                        </h2>
+                    </div>
+                    <div class="level-grid" id="levelGrid"></div>
+                </section>
+
+                <section class="game-play" id="gamePlay">
+                    <div class="nav-buttons">
+                        <button class="nav-btn" onclick="game.selectLevel(game.currentWorld)">
+                            <span>←</span> Back to Levels
+                        </button>
+                    </div>
+                    <div class="problem-container" id="problemContainer">
+                    </div>
+                </section>
+
+                <section class="leaderboard-container" id="leaderboard" style="display: none;">
+                    <h2 class="leaderboard-title">🏆 Leaderboard</h2>
+                    <div id="leaderboardList"></div>
+                </section>
+            </div>
+        </main>
+
+        <div class="modal" id="levelModal"></div>
+        <div class="modal" id="worldModal"></div>
+    </div>
+
+    <script src="js/data.js"></script>
+    <script src="js/game.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            game = new AlgebraGame();
+            game.renderWorldMap();
+        });
+    </script>
+</body>
+</html>

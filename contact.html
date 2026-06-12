@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Algebra Champions</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="particles"></div>
+    
+    <header class="header">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <div class="logo-icon">👑</div>
+                <span class="logo-text">Algebra Champions</span>
+            </a>
+            <nav class="nav">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="contact.html" class="active">Contact</a>
+                <a href="game.html" class="btn-play">Play Now</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="about-hero">
+            <div class="container">
+                <h1>Contact Us</h1>
+                <p>We'd love to hear from you! Send us a message.</p>
+            </div>
+        </section>
+
+        <section class="contact-section">
+            <div class="container">
+                <div class="contact-container">
+                    <div class="contact-form">
+                        <h2>Send a Message</h2>
+                        <form id="contactForm">
+                            <div class="form-group">
+                                <label for="name">Your Name *</label>
+                                <input type="text" id="name" name="name" required placeholder="Enter your name">
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email Address *</label>
+                                <input type="email" id="email" name="email" required placeholder="Enter your email">
+                            </div>
+                            <div class="form-group">
+                                <label for="role">I am a...</label>
+                                <select id="role" name="role">
+                                    <option value="student">Student</option>
+                                    <option value="parent">Parent</option>
+                                    <option value="teacher">Teacher</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Message *</label>
+                                <textarea id="message" name="message" required placeholder="Type your message here..."></textarea>
+                            </div>
+                            <button type="submit" class="btn-submit">Send Message</button>
+                        </form>
+                    </div>
+                    
+                    <div class="contact-info">
+                        <h2>Get In Touch</h2>
+                        <div class="info-item">
+                            <span>📧</span>
+                            <p>hello@algebrachampions.com</p>
+                        </div>
+                        <div class="info-item">
+                            <span>📞</span>
+                            <p>1-800-ALGEBRA</p>
+                        </div>
+                        <div class="info-item">
+                            <span>🌐</span>
+                            <p>www.algebrachampions.com</p>
+                        </div>
+                        <div class="info-item">
+                            <span>🏢</span>
+                            <p>123 Math Street<br>Learning City, LC 12345</p>
+                        </div>
+                        
+                        <div style="margin-top: 30px; padding-top: 30px; border-top: 2px solid rgba(255,255,255,0.1);">
+                            <h3 style="font-family: 'Fredoka One', cursive; margin-bottom: 20px;">Follow Us</h3>
+                            <div style="display: flex; gap: 20px;">
+                                <a href="#" style="font-size: 32px; color: var(--text-light);"><i class="fab fa-facebook"></i></a>
+                                <a href="#" style="font-size: 32px; color: var(--text-light);"><i class="fab fa-twitter"></i></a>
+                                <a href="#" style="font-size: 32px; color: var(--text-light);"><i class="fab fa-instagram"></i></a>
+                                <a href="#" style="font-size: 32px; color: var(--text-light);"><i class="fab fa-youtube"></i></a>
+                            </div>
+                        </div>
+                        
+                        <div style="margin-top: 30px; padding: 20px; background: rgba(255,255,255,0.1); border-radius: 15px;">
+                            <h3 style="font-family: 'Fredoka One', cursive; margin-bottom: 15px;">💬 FAQ</h3>
+                            <p style="font-size: 14px; opacity: 0.9; line-height: 1.6;">
+                                <strong>Q: Is the game free?</strong><br>
+                                A: Yes! The basic game is completely free to play.
+                            </p>
+                            <p style="font-size: 14px; opacity: 0.9; line-height: 1.6; margin-top: 15px;">
+                                <strong>Q: What ages is it for?</strong><br>
+                                A: Best for ages 8-14 (grades 3-8)
+                            </p>
+                            <p style="font-size: 14px; opacity: 0.9; line-height: 1.6; margin-top: 15px;">
+                                <strong>Q: Can I play on my phone?</strong><br>
+                                A: Yes! Works on tablets and phones.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="features" style="text-align: center;">
+            <div class="container">
+                <h2 class="section-title">Thank You for Your Support!</h2>
+                <p class="hero-subtitle">Algebra Champions helps kids worldwide fall in love with math.</p>
+                <div class="nav-buttons" style="justify-content: center;">
+                    <a href="about.html" class="nav-btn">Learn More About the Game</a>
+                    <a href="game.html" class="nav-btn" style="background: var(--primary-orange);">Start Playing</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2026 Algebra Champions. All rights reserved.</p>
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/game.js"></script>
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const role = document.getElementById('role').value;
+            const message = document.getElementById('message').value;
+            
+            alert(`Thank you, ${name}! We received your message and will contact you at ${email} soon.`);
+            
+            this.reset();
+        });
+    </script>
+</body>
+</html>
